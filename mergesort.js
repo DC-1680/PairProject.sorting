@@ -1,7 +1,7 @@
 function split(wholeArray) {
     /* your code here to define the firstHalf and secondHalf arrays */
     let arrlength = wholeArray.length, 
-        firstHalf = [], 
+        firstHalf = [],
         secondHalf = [];
   if (wholeArray.length === 1){
       return wholeArray;
@@ -19,7 +19,7 @@ function split(wholeArray) {
     return [firstHalf, secondHalf];
 }
 
- var sample = [4, 7, 3, 1]
+ //var sample = [4, 7, 3, 1]
 
  // first split
 // [4, 7]
@@ -28,3 +28,24 @@ function split(wholeArray) {
 // second split
 // [4]
 // [7]
+
+function merge(arr1, arr2){
+    let mergedArray = [];
+    let min;
+    let max; 
+    //debugger;
+    for (let i=0; i<arr1.length; i++){
+        
+        for (let j=0; j<arr2.length; j++){
+            if(arr1[i] < arr2[j] || arr1[i] === arr2[j]){
+                mergedArray.push(arr1[i]);
+            }
+            else if (arr2[j]<arr1[i]){
+                mergedArray.push(arr2[j]);
+            }
+        }
+    }
+    return mergedArray;
+}
+let arr1 = [1, 6]
+let arr2 = [3, 8]

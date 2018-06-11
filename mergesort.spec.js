@@ -13,3 +13,9 @@ describe('Split Array function', function() {
         expect(split(sample3)).toEqual([[5, 8, 3], [9, 10]]);
     })
   });
+
+describe('Merge function', function(){
+    it('is able to merge two sorted arrays into one sorted array', function(){
+      // test the merging algorithm
+    });
+  });
