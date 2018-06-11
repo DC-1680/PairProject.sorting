@@ -34,18 +34,30 @@ function merge(arr1, arr2){
     let min;
     let max; 
     //debugger;
-    for (let i=0; i<arr1.length; i++){
-        
-        for (let j=0; j<arr2.length; j++){
-            if(arr1[i] < arr2[j] || arr1[i] === arr2[j]){
-                mergedArray.push(arr1[i]);
+    // [1, 4], [3, 7]
+    // [1, 3, 4, 7]
+
+    for (let i = 0; i < arr1.length; i++){
+        min = arr1[i];
+        for (let j = 0; j < arr2.length; j++){
+            if (arr1[i] < arr2[j] || arr1[i] === arr2[j]){
+                // minimum will be arr1[i];
+                // max becomes arr2[j];
+                max = arr2[j];
+                
             }
-            else if (arr2[j]<arr1[i]){
-                mergedArray.push(arr2[j]);
+            else if (arr2[j] < arr1[i]){
+                // minimum becomes arr2[i];
+                min = arr2[j];]
             }
+            mergedArray.push(min);
         }
     }
     return mergedArray;
 }
-let arr1 = [1, 6]
-let arr2 = [3, 8]
+
+let arr1 = [1, 6];
+let arr2 = [3, 8];
+
+let arr3 = [1, 2];
+let arr4 = [3, 8];
